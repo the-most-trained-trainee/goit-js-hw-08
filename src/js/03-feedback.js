@@ -29,6 +29,6 @@ function onSubmit(event) {
     }
 }
 
-loginForm.addEventListener("submit", onSubmit);
-
 loginForm.addEventListener("input", throttle(formInput => localStorage.setItem("feedback-form-state", JSON.stringify(formDataReceipt(formInput))), 500));
+
+loginForm.addEventListener("submit", onSubmit);
